@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.25)
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+project(Project_3)
+
+set(SFML_DIR "/opt/homebrew/lib/cmake/SFML")
+
+find_package(SFML 2.5 COMPONENTS system window graphics REQUIRED)
+add_executable(Project_3 src/main.cpp src/Board.h src/Board.cpp src/Tile.h src/Tile.cpp src/Stopwatch.h)
+target_link_libraries(Project_3 sfml-system sfml-window sfml-graphics)

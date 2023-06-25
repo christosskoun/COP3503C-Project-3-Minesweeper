@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.25)
+project(Project_3)
+
+set(CMAKE_CXX_STANDARD 23)
+
+add_executable(Project_3 src/main.cpp src/Tile.cpp src/Board.cpp src/Stopwatch.h)
+
+set(SFML_STATIC_LIBRARIES TRUE)
+set(SFML_DIR C:/SFML/lib/cmake/SFML)
+find_package(SFML COMPONENTS system window graphics audio network REQUIRED)
+
+include_directories(c:/SFML/include/SFML)
+target_link_libraries(Project_3 sfml-system sfml-window sfml-graphics sfml-audio)
